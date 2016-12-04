@@ -5,6 +5,7 @@ import { ProfileComponent } from './profile/profile.component';
 import {FormsModule} from '@angular/forms';
 import { NewpersonComponent } from './newperson/newperson.component';
 
+import{PeopleService} from './people.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -13,6 +14,10 @@ import { NewpersonComponent } from './newperson/newperson.component';
   exports:[
    PeopleComponent
   ],
+  providers:[
+    PeopleService
+  ],
+
   declarations: [PeopleComponent, ProfileComponent, NewpersonComponent]
 })
 export class PeopleModule { }

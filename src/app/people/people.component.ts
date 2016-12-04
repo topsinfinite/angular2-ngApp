@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import{PeopleService} from './people.service';
+
 @Component({
   selector: 'app-people',
   templateUrl: './people.component.html',
@@ -8,31 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class PeopleComponent implements OnInit {
   people=[];
   isAddingNew:boolean=false;
-  constructor() { }
+  constructor(private peopleService:PeopleService) { }
 
   ngOnInit() {
-    this.people=[
-      {
-        name:"Temitope Fatayo",
-        status:'currently coding...',
-        website:{
-           url:'http://cxp.com.ng',
-           name:'cxp.com.ng'
-        },
-        twitter:{
-          url:'http://twitter.com/topsinfinite',
-          name:'@topsinfinite'
-        }
-      },
-       {
-         name:'Wale Ajiboye',
-         status:'currently at unilag',
-         twitter:{
-           url:'http://twitter.com/waisty',
-           name:'Waisty'
-         }
-       }
-    ];
+    this.peopleService.fetchPeople()
+    .subscribe(data=>{
+      this.people=data;
+    });
   }
   onSubmit(newperson){
    this.people.push(newperson);

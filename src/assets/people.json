@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Temitope Fatayo",
+        "status": "currentlycoding...",
+        "website": {
+            "url": "http: //cxp.com.ng", 
+            "name": "Temitope Fatayo"
+        },
+        "twitter": {
+            "url": "http: //twitter.com/topsinfinite", 
+            "name": "@topsinfinite"
+        }
+    },
+    {
+        "name": "WaleAjiboye",
+        "status": "currentlyatunilag",
+        "twitter": {
+            "url": "http: //twitter.com/waisty", 
+            "name": "Waisty"
+        }
+    }
+];
